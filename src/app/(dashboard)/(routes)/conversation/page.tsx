@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import * as z from 'zod'
 import axios from 'axios'
 import { Heading } from '@/components/heading'
@@ -47,6 +47,7 @@ const ConversationPage = () => {
       router.refresh()
     }
   }
+
   return (
     <div>
       <Heading

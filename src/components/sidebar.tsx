@@ -8,6 +8,8 @@ import { cn } from '@/lib/utils'
 import {
   Code,
   ImageIcon,
+  Contact,
+  LayoutTemplate,
   LayoutDashboard,
   MessageSquare,
   Music,
@@ -56,6 +58,18 @@ const routes = [
     href: '/code',
     color: 'text-green-700',
     icon: Code,
+  },
+  {
+    label: 'Contacts',
+    href: '/contacts',
+    color: 'text-yellow-500',
+    icon: Contact,
+  },
+  {
+    label: 'Templates',
+    href: '/templates',
+    color: 'text-red-700',
+    icon: LayoutTemplate,
   },
   {
     label: 'Settings',
