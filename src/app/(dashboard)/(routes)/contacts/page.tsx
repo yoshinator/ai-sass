@@ -1,9 +1,11 @@
 'use client'
 
 import { useEffect } from 'react'
+
 import axios from 'axios'
-import { Heading } from '@/components/heading'
 import { Contact } from 'lucide-react'
+
+import { Heading } from '@/components/heading'
 
 const ContactsPage = () => {
   useEffect(() => {
@@ -41,11 +43,11 @@ const ContactsPage = () => {
   return (
     <div>
       <Heading
-        title='Contacts'
-        description='Import and manage all your contacts'
+        bgColor="bg-yellow-500/10"
+        description="Import and manage all your contacts"
         icon={Contact}
-        iconColor='text-yellow-500'
-        bgColor='bg-yellow-500/10'
+        iconColor="text-yellow-500"
+        title="Contacts"
       />
     </div>
   )

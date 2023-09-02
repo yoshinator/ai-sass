@@ -1,7 +1,7 @@
-import { auth } from '@clerk/nextjs'
-import { NextResponse, NextRequest } from 'next/server'
-import { gmail_v1, google } from 'googleapis'
 import clerk from '@clerk/clerk-sdk-node'
+import { auth } from '@clerk/nextjs'
+import { gmail_v1, google } from 'googleapis'
+import { NextResponse } from 'next/server'
 
 async function fetchMessages(gmail: gmail_v1.Gmail, options: any) {
   return await gmail.users.messages.list({
@@ -40,10 +40,7 @@ export async function GET(req: Request) {
       return new NextResponse('Unauthorized', { status: 401 })
     }
 
-    const [OauthAccessToken] = await clerk.users.getUserOauthAccessToken(
-      userId,
-      'oauth_google'
-    )
+    const [OauthAccessToken] = await clerk.users.getUserOauthAccessToken(userId, 'oauth_google')
     const { token } = OauthAccessToken
 
     if (!token) {

@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from 'react'
 
-import { Button } from '@/components/ui/button'
+import { Menu } from 'lucide-react'
+
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
-import { Menu } from 'lucide-react'
 import Sidebar from './sidebar'
 
 const MobileSidebar = () => {
@@ -19,9 +19,9 @@ const MobileSidebar = () => {
   return (
     <Sheet>
       <SheetTrigger>
-        <Menu className='md:hidden' />
+        <Menu className="md:hidden" />
       </SheetTrigger>
-      <SheetContent side='left' className='p-0'>
+      <SheetContent className="p-0" side="left">
         <Sidebar />
       </SheetContent>
     </Sheet>
