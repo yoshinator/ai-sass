@@ -18,6 +18,6 @@ export async function GET() {
     })
   } catch (error) {
     console.log(error)
-    return new NextResponse('Unauthorized', { status: 401 })
+    return new NextResponse('Unknown error: ' + error, { status: 500 })
   }
 }
