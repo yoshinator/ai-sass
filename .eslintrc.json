@@ -48,8 +48,7 @@
       {
         "callbacksLast": true,
         "ignoreCase": true,
-        "noSortAlphabetically": false,
-        "reservedFirst": true
+        "noSortAlphabetically": false
       }
     ],
     "@typescript-eslint/ban-ts-comment": "off",
@@ -63,5 +62,5 @@
     "react/prop-types": "off",
     "simple-import-sort/exports": "error"
   },
-  "ignorePatterns": ["**/*.css"]
+  "ignorePatterns": ["**/*.css", "CloudFunctions/**/*"]
 }
